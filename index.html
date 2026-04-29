@@ -887,7 +887,7 @@ document.addEventListener('click', (e) => {
 (function() {
   // To use your own photo: set PHOTO_URL to your image URL
   // Example: const PHOTO_URL = 'https://example.com/your-photo.jpg';
-  const PHOTO_URL = 'https://drive.google.com/file/d/1ytfG-8_i_IFfsPWKe0G1wPF0Gqr1MD9c/view?usp=sharing'; // ← Paste your headshot URL here
+  const PHOTO_URL = 'https://drive.google.com/uc?export=view&id=1ytfG-8_i_IFfsPWKe0G1wPF0Gqr1MD9c'; // ← Paste your headshot URL here
   if (PHOTO_URL) {
     const img = document.getElementById('avatarImg');
     const initials = document.getElementById('avatarInitials');
@@ -901,7 +901,7 @@ document.addEventListener('click', (e) => {
 document.getElementById('cvDownloadBtn').addEventListener('click', (e) => {
   e.preventDefault();
   // Replace with your actual CV file URL or Google Drive direct link
-  const CV_URL = 'https://drive.google.com/file/d/1g6ghag3nXNfdysqtMi87ooWSzBpyfx7z/view?usp=sharing'; // ← Paste your CV PDF URL here
+  const CV_URL = 'https://drive.google.com/uc?export=download&id=1g6ghag3nXNfdysqtMi87ooWSzBpyfx7z'; // ← Paste your CV PDF URL here
   if (CV_URL) {
     const a = document.createElement('a');
     a.href = CV_URL;
