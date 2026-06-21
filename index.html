@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Md Kamruzzaman — Environmental Scientist</title>
+<link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1ytfG-8_i_IFfsPWKe0G1wPF0Gqr1MD9c=w64-h64">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
@@ -13,6 +14,20 @@
     --shadow:0 4px 24px rgba(26,122,74,0.10);
     --future:#7b2d8b;--future-pale:#f5eef8;--future-light:#c39bd3;
   }
+  html.dark-mode{
+    --green:#3ecf8a;--green-light:#4fe3a0;--green-pale:#16271e;
+    --dark:#05080a;--mid:#0d1812;--text:#e8f0ec;--muted:#9fb8a8;
+    --bg:#0a0f0c;--white:#111813;--accent:#e8c04a;--accent-light:#f5d878;
+    --shadow:0 4px 24px rgba(0,0,0,0.4);
+    --future:#c389d4;--future-pale:#1e1521;--future-light:#a567b8;
+  }
+  html.dark-mode body{background:var(--bg)}
+  html.dark-mode .skill-card,html.dark-mode .exp-card{border-color:rgba(255,255,255,.08)}
+  html.dark-mode nav{background:rgba(10,15,12,0.85)}
+  html.dark-mode .mobile-menu{background:rgba(10,15,12,0.97)}
+
+  .theme-toggle{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;border:1.5px solid rgba(26,122,74,.2);background:transparent;cursor:pointer;transition:all .2s;font-size:1.1rem;margin-left:.5rem}
+  .theme-toggle:hover{background:var(--green-pale);border-color:var(--green)}
   html{scroll-behavior:smooth}
   body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
 
@@ -145,7 +160,8 @@
 
   /* SKILLS */
   #skills{background:var(--bg)}
-  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+  @media(min-width:980px){.skills-grid{grid-template-columns:repeat(4,1fr)}}
   .skill-card{background:var(--white);border-radius:16px;padding:1.75rem;border:1px solid rgba(26,122,74,.1);box-shadow:var(--shadow)}
   .skill-card-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem}
   .skill-icon{width:42px;height:42px;border-radius:10px;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
@@ -208,10 +224,12 @@
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#nbctool">NBC Tool</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#awards">Awards</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
     <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -223,6 +241,7 @@
     <li><a href="#about" class="mobile-nav-link">About</a></li>
     <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
     <li><a href="#publications" class="mobile-nav-link">Publications</a></li>
+    <li><a href="#nbctool" class="mobile-nav-link">NBC Tool</a></li>
     <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
     <li><a href="#awards" class="mobile-nav-link">Awards</a></li>
     <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
@@ -234,6 +253,7 @@
   <div class="hero-inner">
     <div>
       <div class="hero-badge">🌿 Environmental Scientist &amp; Researcher</div>
+      <div class="hero-badge" style="background:rgba(212,160,23,.15);border-color:rgba(212,160,23,.35);color:#e8c04a">🟢 Open to PhD Opportunities</div>
       <h1>Md Kamruzzaman</h1>
       <p class="hero-sub">Soil Biogeochemistry &middot; Ecotoxicology &middot; Nutrient Cycling</p>
       <p class="hero-desc">MSc student in Ecotoxicology at the Hungarian University of Agriculture and Life Sciences (MATE), Stipendium Hungaricum Scholar. Research bridging soil ecosystem processes, biogeochemical cycling, and environmental contamination — integrating field experimentation, molecular tools, and quantitative modelling to advance sustainable agriculture and climate resilience.</p>
@@ -266,7 +286,7 @@
         <h2 class="section-title">Research Profile</h2>
         <p class="profile-text">I am an environmental scientist with a multidisciplinary background spanning soil biogeochemistry, ecotoxicology, and nutrient cycling, shaped by research experience across Bangladesh and Hungary.</p>
         <p class="profile-text">My work focuses on understanding how soil ecosystems respond to environmental stressors — from nitrogen fertilisation and greenhouse gas dynamics to heavy metal contamination and microbial community interactions. I integrate classical soil analyses with molecular tools and quantitative statistical modelling to link ecosystem processes to real-world agricultural and environmental outcomes.</p>
-        <p class="profile-text">Currently, my MSc thesis at MATE investigates how soil organic matter modulates detoxification responses in <em>Caenorhabditis elegans</em> as a proxy for ecotoxicological risk assessment — an integrative approach bridging molecular biology, soil chemistry, and environmental toxicology.</p>
+        <p class="profile-text">My current research programme uses the LUCAS 2018 European Soil Survey — spanning 28 countries and thousands of topsoil samples — to characterise how microbial metabolic demand and enzyme allocation between carbon and phosphorus acquisition vary across Woodland, Grassland, and Cropland systems at continental scale. Alongside this, I independently developed and published a field-validated nutrient balance calculator, and I continue to build statistically rigorous, reproducible pipelines that turn large environmental datasets into actionable insight for sustainable land management.</p>
         <div class="research-areas">
           <div class="ra-card"><div class="ra-icon">🔬</div><h4>Nitrogen Cycling &amp; Nutrient Management</h4><p>Soil nitrogen supply estimation, NMI development, fertiliser optimisation, GHG emission dynamics</p></div>
           <div class="ra-card"><div class="ra-icon">🌎</div><h4>Soil Biogeochemistry &amp; Microbiology</h4><p>Microbial metabolic demand (qO₂), enzyme stoichiometry, FAME profiling, carbon and phosphorus cycling, aggregate stability</p></div>
@@ -284,7 +304,8 @@
               <h4>MSc in Ecotoxicology</h4>
               <p>Hungarian University of Agriculture and Life Sciences (MATE) &middot; Gödöllő, Hungary</p>
               <p style="font-size:.8rem;color:var(--muted)">Sep 2025 – Present &middot; Stipendium Hungaricum Scholar</p>
-              <span class="cgpa">CGPA 4.91 / 5.00 (First Semester)</span>
+              <span class="cgpa">CGPA 4.91 / 5.00 (First Two Semester)</span>
+              <p style="font-size:.78rem;color:var(--muted);margin-top:.5rem;line-height:1.6"><strong>Relevant coursework:</strong> Pesticide Biochemistry · Instrumental Analytics in Environmental Protection · Neurotoxicology · Hydrotoxicology · Ecology · Microbiological Methods in Ecotoxicology</p>
             </div>
           </div>
           <div class="edu-item">
@@ -294,15 +315,17 @@
               <p>Bangladesh Agricultural University (BAU) &middot; Mymensingh, Bangladesh</p>
               <p style="font-size:.8rem;color:var(--muted)">Apr 2022 – Sep 2023</p>
               <span class="cgpa">CGPA 3.797 / 4.00</span>
+              <p style="font-size:.78rem;color:var(--muted);margin-top:.5rem;line-height:1.6"><strong>Relevant coursework:</strong> Soil, Water and Fertilizer Management Using Nuclear Techniques · Soil Fertility and Plant Nutrition · Soil Resilience and Climate Change · Soil Microbiology</p>
             </div>
           </div>
           <div class="edu-item">
-            <div class="edu-dot">KU</div>
+            <div class="edu-dot">BD</div>
             <div class="edu-info">
               <h4>BSc (Hons) Soil, Water &amp; Environment</h4>
               <p>Khulna University &middot; Khulna, Bangladesh</p>
               <p style="font-size:.8rem;color:var(--muted)">Jan 2017 – Feb 2022</p>
               <span class="cgpa">CGPA 3.56 / 4.00</span>
+              <p style="font-size:.78rem;color:var(--muted);margin-top:.5rem;line-height:1.6"><strong>Relevant coursework:</strong> Soil &amp; Environmental Biochemistry · Water &amp; Soil Pollution · Environmental Chemistry · Biostatistics · Soil &amp; Environmental Microbiology</p>
             </div>
           </div>
         </div>
@@ -582,6 +605,45 @@
       </div>
 
       <div class="skill-card">
+        <div class="skill-card-header"><div class="skill-icon">🔬</div><h3>Analytical Instrumentation</h3></div>
+        <div class="skill-tags">
+          <span class="skill-tag">GC–MS (EI)</span>
+          <span class="skill-tag">LC–MS (ESI / APCI)</span>
+          <span class="skill-tag">HPLC / UHPLC (UV, FLD)</span>
+          <span class="skill-tag">Isocratic &amp; gradient elution</span>
+          <span class="skill-tag">UV–Vis &amp; fluorescence spectroscopy</span>
+          <span class="skill-tag">Spectral library searching</span>
+          <span class="skill-tag">Fragmentation pattern interpretation</span>
+          <span class="skill-tag">TIC / extracted ion monitoring</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header"><div class="skill-icon">⚗️</div><h3>Sample Preparation &amp; Extraction</h3></div>
+        <div class="skill-tags">
+          <span class="skill-tag">Solid Phase Extraction (SPE)</span>
+          <span class="skill-tag">Liquid–Liquid Extraction (LLE)</span>
+          <span class="skill-tag">QuEChERS (dispersive SPE)</span>
+          <span class="skill-tag">SPME</span>
+          <span class="skill-tag">POCIS passive sampling</span>
+          <span class="skill-tag">Chemical derivatization (methylation, silylation)</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header"><div class="skill-icon">📋</div><h3>Regulatory &amp; Risk Assessment</h3></div>
+        <div class="skill-tags">
+          <span class="skill-tag">ADI / MRL / NOEL calculation</span>
+          <span class="skill-tag">LOD / LOQ (S/N ratio)</span>
+          <span class="skill-tag">Method validation &amp; recovery rates</span>
+          <span class="skill-tag">Internal standards (isotope labelling)</span>
+          <span class="skill-tag">log Kow partitioning</span>
+          <span class="skill-tag">Pollutant fate &amp; leaching modelling</span>
+          <span class="skill-tag">pH–dissociation equilibria</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
         <div class="skill-card-header"><div class="skill-icon">📊</div><h3>Statistical Analysis</h3></div>
         <div class="skill-tags">
           <span class="skill-tag">OLS path analysis</span>
@@ -596,6 +658,10 @@
           <span class="skill-tag">Mixed models (lme4)</span>
           <span class="skill-tag">SEM (lavaan)</span>
           <span class="skill-tag">Ecoenzymatic stoichiometry</span>
+          <span class="skill-tag">SPSS &amp; Minitab</span>
+          <span class="skill-tag">GraphPad Prism</span>
+          <span class="skill-tag">OriginPro</span>
+          <span class="skill-tag">ArcGIS / QGIS</span>
         </div>
       </div>
 
@@ -612,22 +678,6 @@
           <span class="skill-tag">broom &amp; janitor</span>
           <span class="skill-tag">sf &amp; rnaturalearth (spatial)</span>
           <span class="skill-tag">Reproducible reviewer scripts</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-card-header"><div class="skill-icon">🐍</div><h3>Python &amp; Data Tools</h3></div>
-        <div class="skill-tags">
-          <span class="skill-tag">pandas &amp; numpy</span>
-          <span class="skill-tag">scipy.stats</span>
-          <span class="skill-tag">matplotlib</span>
-          <span class="skill-tag">sklearn (preprocessing)</span>
-          <span class="skill-tag">Statistical verification pipelines</span>
-          <span class="skill-tag">Large dataset handling (n=18,984)</span>
-          <span class="skill-tag">SPSS &amp; Minitab</span>
-          <span class="skill-tag">GraphPad Prism</span>
-          <span class="skill-tag">OriginPro</span>
-          <span class="skill-tag">ArcGIS / QGIS</span>
         </div>
       </div>
 
@@ -665,6 +715,28 @@
   </div>
 </section>
 
+<!-- FEATURED TOOL -->
+<section id="nbctool" style="background:var(--white)">
+  <div class="section-inner fade-in">
+    <p class="section-tag">Independent Build</p>
+    <h2 class="section-title">Featured Tool: Nutrient Balance Calculator</h2>
+    <p class="section-lead">A field-scale decision-support tool I built independently — regression equations, leaching/gaseous loss models, and crop uptake constants validated across three Bangladesh agroecological zones.</p>
+    <div class="exp-card" style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between">
+      <div style="flex:1;min-width:260px">
+        <ul class="exp-bullets">
+          <li>Independently developed all underlying regression equations and loss models (leaching, gaseous N loss)</li>
+          <li>Crop nutrient uptake constants calibrated and validated across three agroecological zones in Bangladesh</li>
+          <li>Published as a live, public web tool — a timestamped, citable record of the underlying scientific contribution</li>
+          <li>Companion to the nutrient balance modelling work published in Heliyon</li>
+        </ul>
+      </div>
+      <div style="flex-shrink:0">
+        <a href="https://kamruzzaman17.github.io/NBCtool/" class="btn-primary" target="_blank" rel="noopener noreferrer">🧮 Open Live Tool ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- AWARDS -->
 <section id="awards">
   <div class="section-inner fade-in">
@@ -697,6 +769,7 @@
           <a href="https://scholar.google.com/citations?user=rb326vAAAAAJ" class="social-btn" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
           <a href="https://orcid.org/0000-0002-5398-5371" class="social-btn" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
           <a href="https://kamruzzaman17.github.io/kamruzzaman/" class="social-btn" target="_blank" rel="noopener noreferrer">Portfolio ↗</a>
+          <a href="https://kamruzzaman17.github.io/NBCtool/" class="social-btn" target="_blank" rel="noopener noreferrer">🧮 NBC Tool ↗</a>
         </div>
       </div>
       <div>
@@ -712,9 +785,38 @@
   </div>
 </section>
 
-<footer>&copy; 2026 Md Kamruzzaman · Environmental Scientist · Gödöllő, Hungary</footer>
+<footer>
+  &copy; 2026 Md Kamruzzaman · Environmental Scientist · Gödöllő, Hungary
+  <div style="margin-top:.5rem;font-size:.72rem;color:#3a5042;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;align-items:center">
+    <span id="lastUpdated">Last updated: —</span>
+    <span>·</span>
+    <span>👁 <img src="https://hits.sh/kamruzzaman17.github.io/kamruzzaman.svg?style=flat-square&label=visits&color=1a7a4a&labelColor=0f1a14" alt="visitor count" style="vertical-align:middle;height:16px"></span>
+  </div>
+</footer>
 
 <script>
+/* Dark mode toggle — persists via localStorage */
+const themeToggle = document.getElementById('themeToggle');
+const htmlEl = document.documentElement;
+
+function applyTheme(isDark) {
+  htmlEl.classList.toggle('dark-mode', isDark);
+  themeToggle.textContent = isDark ? '☀️' : '🌙';
+}
+const savedTheme = localStorage.getItem('kamruzzaman-theme');
+const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+applyTheme(savedTheme ? savedTheme === 'dark' : prefersDark);
+
+themeToggle.addEventListener('click', () => {
+  const isDark = !htmlEl.classList.contains('dark-mode');
+  applyTheme(isDark);
+  localStorage.setItem('kamruzzaman-theme', isDark ? 'dark' : 'light');
+});
+
+/* Last updated — pulled automatically from the file's own last-modified date */
+document.getElementById('lastUpdated').textContent =
+  'Last updated: ' + new Date(document.lastModified).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
 function showPubs(type, btn) {
   ['journals','chapters','future'].forEach(id => {
     document.getElementById(id).classList.toggle('hidden', id !== type);
