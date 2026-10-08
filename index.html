@@ -12,14 +12,12 @@
     --dark:#0f1a14;--mid:#1e3a28;--text:#1a2e1f;--muted:#4a6b55;
     --bg:#f7faf8;--white:#ffffff;--accent:#d4a017;--accent-light:#f0c84a;
     --shadow:0 4px 24px rgba(26,122,74,0.10);
-    --future:#7b2d8b;--future-pale:#f5eef8;--future-light:#c39bd3;
   }
   html.dark-mode{
     --green:#3ecf8a;--green-light:#4fe3a0;--green-pale:#16271e;
     --dark:#05080a;--mid:#0d1812;--text:#e8f0ec;--muted:#9fb8a8;
     --bg:#0a0f0c;--white:#111813;--accent:#e8c04a;--accent-light:#f5d878;
     --shadow:0 4px 24px rgba(0,0,0,0.4);
-    --future:#c389d4;--future-pale:#1e1521;--future-light:#a567b8;
   }
   html.dark-mode body{background:var(--bg)}
   html.dark-mode .skill-card,html.dark-mode .exp-card{border-color:rgba(255,255,255,.08)}
@@ -123,26 +121,31 @@
   .pub-tabs{display:flex;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap}
   .pub-tab{padding:.5rem 1.25rem;border-radius:999px;font-size:.85rem;font-weight:600;border:1.5px solid rgba(26,122,74,.2);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s}
   .pub-tab.active{background:var(--green);color:#fff;border-color:var(--green)}
-  .pub-tab.future-tab{border-color:rgba(123,45,139,.3);color:var(--future)}
-  .pub-tab.future-tab.active{background:var(--future);color:#fff;border-color:var(--future)}
+  .pub-tab.review-tab{border-color:rgba(14,116,144,.3);color:#0e7490}
+  .pub-tab.review-tab.active{background:#0e7490;color:#fff;border-color:#0e7490}
+  html.dark-mode .pub-tab.review-tab{color:#22d3ee}
+  html.dark-mode .pub-tab.review-tab.active{background:#0e7490;color:#fff}
+  .pub-item.review-item{background:#f0f9ff;border-color:rgba(14,116,144,.15)}
+  .pub-item.review-item:hover{background:#e0f4fb;border-color:rgba(14,116,144,.3)}
+  html.dark-mode .pub-item.review-item{background:rgba(14,116,144,.1);border-color:rgba(14,116,144,.2)}
+  .pub-num.review-num{background:#0e7490}
+  .pub-journal.review-journal{color:#0e7490}
+  html.dark-mode .pub-journal.review-journal{color:#22d3ee}
+  .pub-badge-review{font-size:.7rem;font-weight:700;padding:.15rem .55rem;border-radius:999px;background:rgba(14,116,144,.12);color:#0e7490;border:1px solid rgba(14,116,144,.3)}
+  html.dark-mode .pub-badge-review{background:rgba(34,211,238,.12);color:#22d3ee;border-color:rgba(34,211,238,.3)}
 
   .pub-list{display:flex;flex-direction:column;gap:1rem}
   .pub-item{background:var(--bg);border-radius:12px;padding:1.25rem 1.5rem;border:1px solid rgba(26,122,74,.1);transition:all .2s;display:flex;gap:1.25rem;align-items:start}
   .pub-item:hover{background:var(--green-pale);border-color:rgba(26,122,74,.25);transform:translateX(4px)}
-  .pub-item.future-item{background:var(--future-pale);border-color:rgba(123,45,139,.15)}
-  .pub-item.future-item:hover{background:#ede3f5;border-color:rgba(123,45,139,.3)}
   .pub-num{width:32px;height:32px;border-radius:8px;background:var(--green);color:#fff;font-size:.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
-  .pub-num.future-num{background:var(--future)}
   .pub-content{flex:1;min-width:0}
+  .pub-authors{font-size:.8rem;color:var(--muted);margin-bottom:.4rem;line-height:1.5}
   .pub-content h4{font-size:.92rem;font-weight:600;color:var(--text);margin-bottom:.35rem;line-height:1.45}
   .pub-meta{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
   .pub-journal{font-size:.78rem;color:var(--green);font-weight:600}
-  .pub-journal.future-journal{color:var(--future)}
   .pub-year{font-size:.75rem;color:var(--muted)}
   .pub-badge{font-size:.7rem;font-weight:700;padding:.15rem .5rem;border-radius:999px;background:rgba(212,160,23,.15);color:#8a6200}
   .pub-badge-featured{font-size:.7rem;font-weight:700;padding:.15rem .55rem;border-radius:999px;background:linear-gradient(135deg,rgba(212,160,23,.22),rgba(240,200,74,.18));color:#6b4800;border:1px solid rgba(212,160,23,.4)}
-  .pub-badge-future{font-size:.7rem;font-weight:700;padding:.15rem .55rem;border-radius:999px;background:rgba(123,45,139,.12);color:var(--future);border:1px solid rgba(123,45,139,.25)}
-  .pub-badge-target{font-size:.7rem;font-weight:600;padding:.15rem .55rem;border-radius:999px;background:rgba(123,45,139,.08);color:var(--future);border:1px dashed rgba(123,45,139,.3)}
   .pub-link{font-size:.75rem;color:var(--green);text-decoration:none;opacity:.7}
   .pub-link:hover{opacity:1}
   .pub-actions{display:flex;align-items:center;gap:.5rem;margin-top:.5rem;flex-wrap:wrap}
@@ -150,11 +153,6 @@
   .cite-btn:hover{background:rgba(26,122,74,.14);color:var(--green);border-color:rgba(26,122,74,.3)}
   .cite-btn.copied{background:rgba(26,122,74,.18);color:var(--green);border-color:var(--green)}
 
-  /* future notice banner */
-  .future-notice{background:linear-gradient(135deg,rgba(123,45,139,.08),rgba(123,45,139,.04));border:1px solid rgba(123,45,139,.2);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;display:flex;align-items:start;gap:.75rem}
-  .future-notice-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
-  .future-notice p{font-size:.85rem;color:var(--future);line-height:1.6}
-  .future-notice strong{font-weight:700}
 
   .hidden{display:none!important}
 
@@ -226,7 +224,6 @@
       <li><a href="#publications">Publications</a></li>
       <li><a href="#nbctool">NBC Tool</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#trajectory">Trajectory</a></li>
       <li><a href="#awards">Awards</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -244,7 +241,6 @@
     <li><a href="#publications" class="mobile-nav-link">Publications</a></li>
     <li><a href="#nbctool" class="mobile-nav-link">NBC Tool</a></li>
     <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
-    <li><a href="#trajectory" class="mobile-nav-link">Trajectory</a></li>
     <li><a href="#awards" class="mobile-nav-link">Awards</a></li>
     <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
   </ul>
@@ -262,7 +258,7 @@
       <div class="hero-stats">
         <div class="hero-stat"><span>8</span><span>Journal Articles</span></div>
         <div class="hero-stat"><span>5</span><span>Book Chapters</span></div>
-        <div class="hero-stat"><span>3</span><span>In Preparation</span></div>
+        <div class="hero-stat"><span>3</span><span>Under Review</span></div>
       </div>
       <div class="hero-btns">
         <a href="#publications" class="btn-primary">📄 View Publications</a>
@@ -291,7 +287,7 @@
         <p class="profile-text">My current research programme uses the LUCAS 2018 European Soil Survey — spanning 28 countries and thousands of topsoil samples — to characterise how microbial metabolic demand and enzyme allocation between carbon and phosphorus acquisition vary across Woodland, Grassland, and Cropland systems at continental scale. Alongside this, I independently developed and published a field-validated nutrient balance calculator, and I continue to build statistically rigorous, reproducible pipelines that turn large environmental datasets into actionable insight for sustainable land management.</p>
         <div class="research-areas">
           <div class="ra-card"><div class="ra-icon">🔬</div><h4>Nitrogen Cycling &amp; Nutrient Management</h4><p>Soil nitrogen supply estimation, NMI development, fertiliser optimisation, GHG emission dynamics</p></div>
-          <div class="ra-card"><div class="ra-icon">🌎</div><h4>Soil Biogeochemistry &amp; Microbiology</h4><p>Microbial metabolic demand (qO₂), enzyme stoichiometry, FAME profiling, carbon and phosphorus cycling, aggregate stability</p></div>
+          <div class="ra-card"><div class="ra-icon">🌎</div><h4>Soil Biogeochemistry &amp; Microbiology</h4><p>Enzyme ratios and soil pH, acid phosphatase, POM and MAOM carbon fractions, permanganate-oxidizable carbon (POXC), land-use effects on labile carbon, carbon and phosphorus cycling, FAME profiling, aggregate stability</p></div>
           <div class="ra-card"><div class="ra-icon">⚗</div><h4>Ecotoxicology &amp; Contamination</h4><p>Heavy metal fate and remediation, fluoride contamination, pollutant–soil interactions, soil nematode biomarkers</p></div>
           <div class="ra-card"><div class="ra-icon">📊</div><h4>Quantitative Modelling &amp; Data Science</h4><p>OLS path analysis, SEM, mixed models, PCA, partial correlations, non-parametric statistics, reproducible R pipelines</p></div>
         </div>
@@ -306,8 +302,8 @@
               <h4>MSc in Ecotoxicology</h4>
               <p>Hungarian University of Agriculture and Life Sciences (MATE) &middot; Gödöllő, Hungary</p>
               <p style="font-size:.8rem;color:var(--muted)">Sep 2025 – Present &middot; Stipendium Hungaricum Scholar</p>
-              <span class="cgpa">CGPA 4.91 / 5.00 (First Two Semester)</span>
-              <p style="font-size:.78rem;color:var(--muted);margin-top:.5rem;line-height:1.6"><strong>Relevant coursework:</strong> Pesticide Biochemistry · Instrumental Analytics in Environmental Protection · Neurotoxicology · Hydrotoxicology · Ecology · Microbiological Methods in Ecotoxicology</p>
+              <span class="cgpa">CGPA 3.90 / 5.00 (Two Semesters)</span>
+              <p style="font-size:.78rem;color:var(--muted);margin-top:.5rem;line-height:1.6"><strong>Relevant coursework:</strong> Pesticide Biochemistry · Instrumental Analytics in Environmental Protection · Neurotoxicology · Hydrotoxicology · Methods in Ecotoxicology · Microbiological Methods in Ecotoxicology</p>
             </div>
           </div>
           <div class="edu-item">
@@ -321,7 +317,7 @@
             </div>
           </div>
           <div class="edu-item">
-            <div class="edu-dot">BD</div>
+            <div class="edu-dot">KU</div>
             <div class="edu-info">
               <h4>BSc (Hons) Soil, Water &amp; Environment</h4>
               <p>Khulna University &middot; Khulna, Bangladesh</p>
@@ -397,75 +393,121 @@
     <p class="section-tag">Scholarly Output</p>
     <h2 class="section-title">Publications</h2>
     <div class="pub-tabs">
-      <button class="pub-tab active" onclick="showPubs('journals',this)">Journal Articles (8)</button>
+      <button class="pub-tab review-tab active" onclick="showPubs('review',this)">📋 Under Review (3)</button>
+      <button class="pub-tab" onclick="showPubs('journals',this)">Journal Articles (8)</button>
       <button class="pub-tab" onclick="showPubs('chapters',this)">Book Chapters (5)</button>
-      <button class="pub-tab future-tab" onclick="showPubs('future',this)">🔬 In Preparation (3)</button>
     </div>
 
     <!-- JOURNAL ARTICLES -->
-    <div class="pub-list" id="journals">
+    <div class="pub-list" id="review">
+      <div class="pub-item review-item">
+        <div class="pub-num review-num">1</div>
+        <div class="pub-content">
+          <h4>Acid phosphatase carries the soil pH signal in enzyme ratios measured at a fixed assay pH across Europe.</h4>
+          <p class="pub-authors"><strong>Kamruzzaman, M.</strong>, Akter, S., Hredoy, R.H., Al Fattah, A., &amp; Uddin, S.</p>
+          <div class="pub-meta">
+            <span class="pub-journal review-journal">Biology and Fertility of Soils</span>
+            <span class="pub-badge-review">⏳ Under Review</span>
+            <span class="pub-year">2026</span>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item review-item">
+        <div class="pub-num review-num">2</div>
+        <div class="pub-content">
+          <h4>Routine laboratory data predict soil carbon fractions in unsampled European countries better than a spectral benchmark.</h4>
+          <p class="pub-authors"><strong>Kamruzzaman, M.</strong></p>
+          <div class="pub-meta">
+            <span class="pub-journal review-journal">European Journal of Soil Science</span>
+            <span class="pub-badge-review">⏳ Under Review</span>
+            <span class="pub-year">2026</span>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item review-item">
+        <div class="pub-num review-num">3</div>
+        <div class="pub-content">
+          <h4>Land use drives POXC more strongly than management: a global meta-analysis of depth and protocol dependence.</h4>
+          <p class="pub-authors"><strong>Kamruzzaman, M.</strong>, Akter, S., &amp; Uddin, S.</p>
+          <div class="pub-meta">
+            <span class="pub-journal review-journal">European Journal of Soil Science</span>
+            <span class="pub-badge-review">⏳ Under Review</span>
+            <span class="pub-year">2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pub-list hidden" id="journals">
       <div class="pub-item">
         <div class="pub-num">1</div>
         <div class="pub-content">
           <h4>Balancing of crop nutrients requirement to maintain agricultural sustainability</h4>
+          <p class="pub-authors">Jahangir, M. M. R., Rahman, M. S., <strong>Kamruzzaman, M.</strong>, &amp; Jahiruddin, M.</p>
           <div class="pub-meta"><span class="pub-journal">Heliyon</span><span class="pub-year">2025</span><span class="pub-badge">Q1</span><span class="pub-badge-featured">⭐ Featured</span><a href="https://doi.org/10.1016/j.heliyon.2025.e43476" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2025). Balancing of crop nutrients requirement to maintain agricultural sustainability. Heliyon. https://doi.org/10.1016/j.heliyon.2025.e43476')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Jahangir, M. M. R., Rahman, M. S., Kamruzzaman, M., &amp; Jahiruddin, M. (2025). Balancing of crop nutrients requirement to maintain agricultural sustainability. Heliyon. https://doi.org/10.1016/j.heliyon.2025.e43476')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">2</div>
         <div class="pub-content">
           <h4>Microbial immobilization and phosphorus transformation in saline soil: Effects of organic amendments</h4>
+          <p class="pub-authors">Nur, M. A., <strong>Kamruzzaman, M.</strong>, &amp; Amin, M. S.</p>
           <div class="pub-meta"><span class="pub-journal">Journal of Soil Science and Plant Nutrition</span><span class="pub-year">2025</span><span class="pub-badge">Q1</span><span class="pub-badge-featured">⭐ Featured</span><a href="https://doi.org/10.1007/s42729-025-02209-1" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2025). Microbial immobilization and phosphorus transformation in saline soil: Effects of organic amendments. Journal of Soil Science and Plant Nutrition. https://doi.org/10.1007/s42729-025-02209-1')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Nur, M. A., Kamruzzaman, M., &amp; Amin, M. S. (2025). Microbial immobilization and phosphorus transformation in saline soil: Effects of organic amendments. Journal of Soil Science and Plant Nutrition. https://doi.org/10.1007/s42729-025-02209-1')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">3</div>
         <div class="pub-content">
           <h4>Stability and heavy metals accumulation of soil aggregates under different land uses in southwest coastal Bangladesh</h4>
+          <p class="pub-authors">Sarder, M. P., <strong>Kamruzzaman, M.</strong>, Siddique, M. A. B., &amp; Halder, M.</p>
           <div class="pub-meta"><span class="pub-journal">Heliyon</span><span class="pub-year">2024</span><span class="pub-badge">Q1</span><span class="pub-badge-featured">⭐ Featured</span><a href="https://doi.org/10.1016/j.heliyon.2024.e37806" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2024). Stability and heavy metals accumulation of soil aggregates under different land uses in southwest coastal Bangladesh. Heliyon. https://doi.org/10.1016/j.heliyon.2024.e37806')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Sarder, M. P., Kamruzzaman, M., Siddique, M. A. B., &amp; Halder, M. (2024). Stability and heavy metals accumulation of soil aggregates under different land uses in southwest coastal Bangladesh. Heliyon. https://doi.org/10.1016/j.heliyon.2024.e37806')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">4</div>
         <div class="pub-content">
           <h4>Mycorrhizal fungi increase plant nutrient uptake, aggregate stability and microbial biomass in clay soil</h4>
+          <p class="pub-authors">Akter, S., <strong>Kamruzzaman, M.</strong>, Sarder, M. P., Amin, M. S., Joardar, J. C., Islam, M. S., &amp; Halder, M.</p>
           <div class="pub-meta"><span class="pub-journal">Symbiosis (Springer)</span><span class="pub-year">2024</span><span class="pub-badge">Q1</span><span class="pub-badge-featured">⭐ Featured</span><a href="https://doi.org/10.1007/s13199-024-00994-4" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2024). Mycorrhizal fungi increase plant nutrient uptake, aggregate stability and microbial biomass in clay soil. Symbiosis. https://doi.org/10.1007/s13199-024-00994-4')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Akter, S., Kamruzzaman, M., Sarder, M. P., Amin, M. S., Joardar, J. C., Islam, M. S., &amp; Halder, M. (2024). Mycorrhizal fungi increase plant nutrient uptake, aggregate stability and microbial biomass in clay soil. Symbiosis. https://doi.org/10.1007/s13199-024-00994-4')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">5</div>
         <div class="pub-content">
           <h4>Crop residues integration with nitrogen rates reduces yield-scaled nitrous oxide emissions and improves maize yield and soil quality</h4>
+          <p class="pub-authors">Rahman, M. S., Ferdous, J., Mumu, N. J., <strong>Kamruzzaman, M.</strong>, Eckhardt, C., Zaman, M., &amp; Jahangir, M. M. R.</p>
           <div class="pub-meta"><span class="pub-journal">Journal of Integrative Environmental Sciences</span><span class="pub-year">2024</span><a href="https://doi.org/10.1080/1943815X.2024.2310856" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2024). Crop residues integration with nitrogen rates reduces yield-scaled nitrous oxide emissions and improves maize yield and soil quality. Journal of Integrative Environmental Sciences. https://doi.org/10.1080/1943815X.2024.2310856')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Rahman, M. S., Ferdous, J., Mumu, N. J., Kamruzzaman, M., Eckhardt, C., Zaman, M., &amp; Jahangir, M. M. R. (2024). Crop residues integration with nitrogen rates reduces yield-scaled nitrous oxide emissions and improves maize yield and soil quality. Journal of Integrative Environmental Sciences. https://doi.org/10.1080/1943815X.2024.2310856')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">6</div>
         <div class="pub-content">
           <h4>Integrating nitrogen fertilization with crop residues to improve nitrogen management in intensively managed cropping systems</h4>
+          <p class="pub-authors">Jahangir, M. M. R., <strong>Kamruzzaman, M.</strong>, Ferdous, J., Rahman, M. S., &amp; Islam, K. R.</p>
           <div class="pub-meta"><span class="pub-journal">Archives of Agronomy and Soil Science</span><span class="pub-year">2023</span><span class="pub-badge">Q1</span><span class="pub-badge-featured">⭐ Featured</span><a href="https://doi.org/10.1080/03650340.2023.2283191" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2023). Integrating nitrogen fertilization with crop residues to improve nitrogen management in intensively managed cropping systems. Archives of Agronomy and Soil Science. https://doi.org/10.1080/03650340.2023.2283191')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Jahangir, M. M. R., Kamruzzaman, M., Ferdous, J., Rahman, M. S., &amp; Islam, K. R. (2023). Integrating nitrogen fertilization with crop residues to improve nitrogen management in intensively managed cropping systems. Archives of Agronomy and Soil Science. https://doi.org/10.1080/03650340.2023.2283191')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">7</div>
         <div class="pub-content">
           <h4>Synergistic effects of silicon and phosphorus co-application on rice (<em>Oryza sativa</em> L.) growth, yield and nutrient use efficiency in saline soil</h4>
+          <p class="pub-authors"><strong>Kamruzzaman, M.</strong>, Akter, S., Khan, M. Z., &amp; Amin, M. S.</p>
           <div class="pub-meta"><span class="pub-journal">Silicon (Springer)</span><span class="pub-year">2023</span><span class="pub-badge">Q1</span><span class="pub-badge-featured">⭐ Featured</span><a href="https://doi.org/10.1007/s12633-023-02509-0" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2023). Synergistic effects of silicon and phosphorus co-application on rice (Oryza sativa L.) growth, yield and nutrient use efficiency in saline soil. Silicon. https://doi.org/10.1007/s12633-023-02509-0')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M., Akter, S., Khan, M. Z., &amp; Amin, M. S. (2023). Synergistic effects of silicon and phosphorus co-application on rice (Oryza sativa L.) growth, yield and nutrient use efficiency in saline soil. Silicon. https://doi.org/10.1007/s12633-023-02509-0')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">8</div>
         <div class="pub-content">
           <h4>Enhanced potassium fertilization improved rice (<em>Oryza sativa</em>) yield and nutrient uptake in coastal saline soil of Bangladesh</h4>
+          <p class="pub-authors">Akter, S., <strong>Kamruzzaman, M.</strong>, Khan, M. Z., &amp; Amin, M. S.</p>
           <div class="pub-meta"><span class="pub-journal">Journal of Soil Science and Plant Nutrition</span><span class="pub-year">2023</span><span class="pub-badge">Q1</span><span class="pub-badge-featured">⭐ Featured</span><a href="https://doi.org/10.1007/s42729-023-01144-3" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2023). Enhanced potassium fertilization improved rice (Oryza sativa) yield and nutrient uptake in coastal saline soil of Bangladesh. Journal of Soil Science and Plant Nutrition. https://doi.org/10.1007/s42729-023-01144-3')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Akter, S., Kamruzzaman, M., Khan, M. Z., &amp; Amin, M. S. (2023). Enhanced potassium fertilization improved rice (Oryza sativa) yield and nutrient uptake in coastal saline soil of Bangladesh. Journal of Soil Science and Plant Nutrition. https://doi.org/10.1007/s42729-023-01144-3')">📋 Copy Citation</button></div>
         </div>
       </div>
     </div>
@@ -476,105 +518,45 @@
         <div class="pub-num">1</div>
         <div class="pub-content">
           <h4>Chromium Toxicity: Source, Distribution, Challenges, and Remediation</h4>
+          <p class="pub-authors"><strong>Kamruzzaman, M.</strong>, Hredoy, R. H., Shimo, F. J., Khan, M. S. U., Amin, M. S., Ritu, S. A., &amp; Uddin, S.</p>
           <div class="pub-meta"><span class="pub-journal">Chromium Toxicity; Challenges and Solutions — Springer</span><span class="pub-year">2026</span><a href="https://doi.org/10.1007/978-3-032-14323-5_1" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2026). Chromium Toxicity: Source, Distribution, Challenges, and Remediation. In: Chromium Toxicity; Challenges and Solutions. Springer.')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M., Hredoy, R. H., Shimo, F. J., Khan, M. S. U., Amin, M. S., Ritu, S. A., &amp; Uddin, S. (2026). Chromium Toxicity: Source, Distribution, Challenges, and Remediation. In: Chromium Toxicity; Challenges and Solutions. Springer.')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">2</div>
         <div class="pub-content">
           <h4>Exposure to Environmental Chromium — An Ongoing Challenge</h4>
+          <p class="pub-authors">Khan, M. S. U., <strong>Kamruzzaman, M.</strong>, Ritu, S. A., Zaman, S. B., Afridi, N., Hasan, N. T., Mondal, S., Hasan, M., &amp; Uddin, S.</p>
           <div class="pub-meta"><span class="pub-journal">Chromium Toxicity; Challenges and Solutions — Springer</span><span class="pub-year">2026</span><a href="https://doi.org/10.1007/978-3-032-14323-5_4" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2026). Exposure to Environmental Chromium — An Ongoing Challenge. In: Chromium Toxicity; Challenges and Solutions. Springer.')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Khan, M. S. U., Kamruzzaman, M., Ritu, S. A., Zaman, S. B., Afridi, N., Hasan, N. T., Mondal, S., Hasan, M., &amp; Uddin, S. (2026). Exposure to Environmental Chromium — An Ongoing Challenge. In: Chromium Toxicity; Challenges and Solutions. Springer.')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">3</div>
         <div class="pub-content">
           <h4>Regulations and Policies for Chromium Emissions to the Environment</h4>
+          <p class="pub-authors">Hredoy, R. H., Shimo, F. J., <strong>Kamruzzaman, M.</strong>, Khan, M. S. U., Amin, M. S., Ritu, S. A., &amp; Uddin, S.</p>
           <div class="pub-meta"><span class="pub-journal">Chromium Toxicity; Challenges and Solutions — Springer</span><span class="pub-year">2026</span><a href="https://doi.org/10.1007/978-3-032-14323-5_3" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2026). Regulations and Policies for Chromium Emissions to the Environment. In: Chromium Toxicity; Challenges and Solutions. Springer.')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Hredoy, R. H., Shimo, F. J., Kamruzzaman, M., Khan, M. S. U., Amin, M. S., Ritu, S. A., &amp; Uddin, S. (2026). Regulations and Policies for Chromium Emissions to the Environment. In: Chromium Toxicity; Challenges and Solutions. Springer.')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">4</div>
         <div class="pub-content">
           <h4>Diving Deep: Exploring Fluoride in Groundwater — Causes, Implications, and Mitigation</h4>
+          <p class="pub-authors"><strong>Kamruzzaman, M.</strong>, Khan, M. S. U., Ritu, S. A., Khanom, S., Hossain, M., Islam, M. R., &amp; Uddin, S.</p>
           <div class="pub-meta"><span class="pub-journal">Fluorides in Drinking Water — Springer Nature Switzerland</span><span class="pub-year">2025</span><a href="https://doi.org/10.1007/978-3-031-77247-4_8" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2025). Diving Deep: Exploring Fluoride in Groundwater. In: Fluorides in Drinking Water. Springer Nature Switzerland.')">📋 Copy Citation</button></div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M., Khan, M. S. U., Ritu, S. A., Khanom, S., Hossain, M., Islam, M. R., &amp; Uddin, S. (2025). Diving Deep: Exploring Fluoride in Groundwater. In: Fluorides in Drinking Water. Springer Nature Switzerland.')">📋 Copy Citation</button></div>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-num">5</div>
         <div class="pub-content">
           <h4>Harnessing Biochar: A Sustainable Approach to Fluoride Removal from Water</h4>
+          <p class="pub-authors"><strong>Kamruzzaman, M.</strong>, Khan, M. S. U., Ritu, S. A., Khanom, S., Hossain, M., Islam, M. R., &amp; Uddin, S.</p>
           <div class="pub-meta"><span class="pub-journal">Fluorides in Drinking Water — Springer Nature Switzerland</span><span class="pub-year">2025</span><a href="https://doi.org/10.1007/978-3-031-77247-4_9" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
-          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M. et al. (2025). Harnessing Biochar: A Sustainable Approach to Fluoride Removal from Water. In: Fluorides in Drinking Water. Springer Nature Switzerland.')">📋 Copy Citation</button></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- IN PREPARATION -->
-    <div class="pub-list hidden" id="future">
-      <div class="future-notice">
-        <div class="future-notice-icon">🔬</div>
-        <p><strong>Manuscripts in preparation.</strong> These papers are currently being finalised for submission. Statistics are verified from raw data; all analyses are complete. Target journals are indicated for each manuscript.</p>
-      </div>
-
-      <div class="pub-item future-item">
-        <div class="pub-num future-num">1</div>
-        <div class="pub-content">
-          <h4>Microbial Metabolic Demand Co-varies with Enzyme Allocation Between Carbon and Phosphorus Acquisition in European Woodland and Cropland Soils</h4>
-          <div class="pub-meta">
-            <span class="pub-journal future-journal">Soil Biology and Biochemistry</span>
-            <span class="pub-year">In preparation · 2025</span>
-            <span class="pub-badge-future">🧬 LUCAS 2018</span>
-            <span class="pub-badge-target">Target: SBB</span>
-          </div>
-          <p style="font-size:.8rem;color:var(--muted);margin-top:.5rem;line-height:1.6">
-            Using 420 topsoil samples from the LUCAS 2018 Soil Survey (Austria &amp; Bulgaria), this study characterises how microbial metabolic demand (qO₂) co-varies with the allocation between carbon- and phosphorus-cycling enzymes across Woodland and Cropland systems. OLS path analysis identifies basal respiration (β = +0.362***) and soil pH (β = −0.122*) as independent drivers of qO₂, while qO₂ is negatively associated with β-glucosidase (partial ρ = −0.230*** in Woodland) and positively with acid phosphatase (β = +0.315***), confirmed by a significantly lower BG:AP ratio in Woodland soils (median 0.436 vs 0.702).
-          </p>
-          <div class="pub-actions">
-            <span style="font-size:.75rem;color:var(--future);font-weight:600">📊 n = 420 · R² = 0.699 · LUCAS 2018</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-item future-item">
-        <div class="pub-num future-num">2</div>
-        <div class="pub-content">
-          <h4>Grassland and Woodland Soils Share a Common Microbial Physiological State Despite Contrasting Soil Chemistry: Evidence from the LUCAS 2018 Survey Across 28 European Countries</h4>
-          <div class="pub-meta">
-            <span class="pub-journal future-journal">Global Change Biology</span>
-            <span class="pub-year">In preparation · 2025</span>
-            <span class="pub-badge-future">🌍 28 EU Countries</span>
-            <span class="pub-badge-target">Target: GCB</span>
-          </div>
-          <p style="font-size:.8rem;color:var(--muted);margin-top:.5rem;line-height:1.6">
-            Using the LUCAS 2018 COMBINED dataset (n = 17,510 environmental; n = 683 microbial), this study demonstrates that Grassland and Woodland soils are physiologically indistinguishable in qO₂ (Wilcoxon p = 0.565 ns) and BG:AP ratio (p = 0.188 ns) despite significant differences in pH (1.5-unit contrast) and OC (1.6-fold contrast), while both land-use types differ strongly from Cropland (all p &lt; 0.001). Agricultural management history, not soil chemistry, is the primary determinant of microbial physiological state at continental scale.
-          </p>
-          <div class="pub-actions">
-            <span style="font-size:.75rem;color:var(--future);font-weight:600">📊 n = 17,510 · 28 countries · LUCAS 2018</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-item future-item">
-        <div class="pub-num future-num">3</div>
-        <div class="pub-content">
-          <h4>Nutrient Release or Salinity Risk? Mustard Oilcake Drives Progressive Macronutrient Mineralisation Without Ionic Penalty in Coastal Saline Soils of Bangladesh</h4>
-          <div class="pub-meta">
-            <span class="pub-journal future-journal">Journal of Soil Science and Plant Nutrition</span>
-            <span class="pub-year">In preparation · 2025</span>
-            <span class="pub-badge-future">🌾 Saline Soils</span>
-            <span class="pub-badge-target">Target: JSSPN</span>
-          </div>
-          <p style="font-size:.8rem;color:var(--muted);margin-top:.5rem;line-height:1.6">
-            This study investigates whether mustard oilcake application drives macronutrient (N, P, K) mineralisation in coastal saline soils of Bangladesh without exacerbating ionic stress. Findings characterise the temporal dynamics of nutrient release and evaluate the trade-off between organic amendment benefits and potential salinity penalty across soil depths and incubation periods.
-          </p>
-          <div class="pub-actions">
-            <span style="font-size:.75rem;color:var(--future);font-weight:600">🌾 Coastal saline soils · Bangladesh</span>
-          </div>
+          <div class="pub-actions"><button class="cite-btn" onclick="copyCitation(this,'Kamruzzaman, M., Khan, M. S. U., Ritu, S. A., Khanom, S., Hossain, M., Islam, M. R., &amp; Uddin, S. (2025). Harnessing Biochar: A Sustainable Approach to Fluoride Removal from Water. In: Fluorides in Drinking Water. Springer Nature Switzerland.')">📋 Copy Citation</button></div>
         </div>
       </div>
     </div>
@@ -739,59 +721,6 @@
   </div>
 </section>
 
-<!-- TRAJECTORY -->
-<section id="trajectory" style="background:var(--bg)">
-  <div class="section-inner fade-in">
-    <p class="section-tag">Momentum</p>
-    <h2 class="section-title">Trajectory</h2>
-    <div style="display:flex;flex-wrap:wrap;gap:0;align-items:stretch">
-
-      <a href="https://ss.bau.edu.bd/" target="_blank" rel="noopener noreferrer" class="exp-card" style="flex:1;min-width:150px;text-align:center;padding:1.25rem .75rem;text-decoration:none;color:inherit;display:block">
-        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">2023</div>
-        <div style="font-weight:700;font-size:.88rem;color:var(--text)">MSc Soil Science</div>
-        <div style="font-size:.75rem;color:var(--green);margin-top:.3rem">BAU, Dept. of Soil Science ↗</div>
-      </a>
-
-      <a href="https://ed.uni-mate.hu/msc-in-ecotoxicology" target="_blank" rel="noopener noreferrer" class="exp-card" style="flex:1;min-width:150px;text-align:center;padding:1.25rem .75rem;text-decoration:none;color:inherit;display:block">
-        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">2025–26</div>
-        <div style="font-weight:700;font-size:.88rem;color:var(--text)">MSc Ecotoxicology</div>
-        <div style="font-size:.75rem;color:var(--green);margin-top:.3rem">MATE, in progress ↗</div>
-      </a>
-
-      <a href="#publications" onclick="setTimeout(()=>{document.querySelector('.future-tab').click()},50)" class="exp-card" style="flex:1;min-width:150px;text-align:center;padding:1.25rem .75rem;text-decoration:none;color:inherit;display:block">
-        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">Ongoing</div>
-        <div style="font-weight:700;font-size:.88rem;color:var(--text)">3 Manuscripts</div>
-        <div style="font-size:.75rem;color:var(--green);margin-top:.3rem">In preparation ↗</div>
-      </a>
-
-      <a href="https://kamruzzaman17.github.io/NBCtool/" target="_blank" rel="noopener noreferrer" class="exp-card" style="flex:1;min-width:150px;text-align:center;padding:1.25rem .75rem;text-decoration:none;color:inherit;display:block">
-        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">Published</div>
-        <div style="font-weight:700;font-size:.88rem;color:var(--text)">NBC Tool</div>
-        <div style="font-size:.75rem;color:var(--green);margin-top:.3rem">Live web tool ↗</div>
-      </a>
-
-      <div class="exp-card" style="flex:1;min-width:150px;text-align:center;padding:1.25rem .75rem;border:1px dashed rgba(26,122,74,.3);background:var(--green-pale)">
-        <div style="font-size:.7rem;color:var(--green);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">Next</div>
-        <div style="font-weight:700;font-size:.88rem;color:var(--green)">PhD</div>
-        <div style="font-size:.75rem;color:var(--muted);margin-top:.3rem">Open to opportunities</div>
-      </div>
-
-      <div class="exp-card" style="flex:1;min-width:150px;text-align:center;padding:1.25rem .75rem;opacity:.7">
-        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">Future</div>
-        <div style="font-weight:700;font-size:.88rem;color:var(--text)">Postdoc</div>
-        <div style="font-size:.75rem;color:var(--muted);margin-top:.3rem">Continued research</div>
-      </div>
-
-      <div class="exp-card" style="flex:1;min-width:150px;text-align:center;padding:1.25rem .75rem;opacity:.7">
-        <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">Long-term</div>
-        <div style="font-weight:700;font-size:.88rem;color:var(--text)">University Teacher</div>
-        <div style="font-size:.75rem;color:var(--muted);margin-top:.3rem">Research &amp; mentorship</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- AWARDS -->
 <section id="awards">
   <div class="section-inner fade-in">
@@ -873,7 +802,7 @@ document.getElementById('lastUpdated').textContent =
   'Last updated: ' + new Date(document.lastModified).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
 function showPubs(type, btn) {
-  ['journals','chapters','future'].forEach(id => {
+  ['review','journals','chapters'].forEach(id => {
     document.getElementById(id).classList.toggle('hidden', id !== type);
   });
   document.querySelectorAll('.pub-tab').forEach(t => t.classList.remove('active'));
