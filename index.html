@@ -166,6 +166,14 @@
 
 
   .hidden{display:none!important}
+  /* Figure previews in Under Review */
+  .fig-panel{margin-top:1rem;display:grid;gap:1rem}
+  .pub-fig{margin:0;background:#fff;border:1px solid rgba(79,107,58,.2);border-radius:10px;padding:.75rem}
+  .pub-fig img{width:100%;height:auto;display:block;border-radius:4px}
+  .pub-fig figcaption{font-size:.8rem;color:#2A1F17;line-height:1.55;margin-top:.6rem}
+  .fig-note{font-size:.72rem;color:var(--muted);line-height:1.5}
+  .fig-btn{color:var(--moss);border-color:rgba(79,107,58,.3);background:rgba(79,107,58,.07)}
+
 
   /* Serif headings */
   .hero h1,.section-title,.nav-logo{font-family:var(--serif);letter-spacing:-.3px}
@@ -490,6 +498,18 @@
             <span class="pub-badge-review">Under review</span>
             <span class="pub-year">2026</span>
           </div>
+          <div class="pub-actions"><button class="cite-btn fig-btn" aria-expanded="false" aria-controls="figs-enzyme" onclick="toggleFigs(this)">Show figures</button></div>
+          <div class="fig-panel hidden" id="figs-enzyme">
+            <figure class="pub-fig">
+              <a href="figures/enzyme-ph-ratios.webp" target="_blank" rel="noopener"><img src="figures/enzyme-ph-ratios.webp" alt="Enzyme ratios BG:AP, BG:NAG and NAG:AP plotted against soil pH across 778 European sites, with a bar showing acid phosphatase accounts for 81% of the within-country BG:AP slope" loading="lazy"></a>
+              <figcaption>Across 778 European sites, the carbon-to-phosphorus enzyme ratio rises steeply with soil pH. Acid phosphatase, not the carbon enzyme, carries about four-fifths of that slope.</figcaption>
+            </figure>
+            <figure class="pub-fig">
+              <a href="figures/enzyme-within-country.webp" target="_blank" rel="noopener"><img src="figures/enzyme-within-country.webp" alt="Slopes of BG:AP and acid phosphatase on soil pH estimated separately in 16 European countries, compared with between-country slopes" loading="lazy"></a>
+              <figcaption>The pH effect is not a between-country artifact. It holds inside each of 16 countries, and within-country and between-country slopes agree.</figcaption>
+            </figure>
+            <p class="fig-note">Submitted manuscript, under review at <em>Biology and Fertility of Soils</em>. Figures may change in revision. Data: LUCAS topsoil survey, made available by the European Commission through the European Soil Data Centre managed by the Joint Research Centre (JRC), https://esdac.jrc.ec.europa.eu/.</p>
+          </div>
         </div>
       </div>
       <div class="pub-item review-item">
@@ -501,6 +521,18 @@
             <span class="pub-journal review-journal">European Journal of Soil Science</span>
             <span class="pub-badge-review">Under review</span>
             <span class="pub-year">2026</span>
+          </div>
+          <div class="pub-actions"><button class="cite-btn fig-btn" aria-expanded="false" aria-controls="figs-carbon" onclick="toggleFigs(this)">Show figures</button></div>
+          <div class="fig-panel hidden" id="figs-carbon">
+            <figure class="pub-fig">
+              <a href="figures/carbon-heldout-countries.webp" target="_blank" rel="noopener"><img src="figures/carbon-heldout-countries.webp" alt="Leave-one-country-out accuracy of spectral and routine-property models for POM carbon, MAOM carbon and POM fraction, and the share of accuracy lost when countries are withheld" loading="lazy"></a>
+              <figcaption>In countries the models never saw, routine soil properties predict POM and MAOM carbon better than spectra. Spectral models lose far more accuracy when whole countries are held out.</figcaption>
+            </figure>
+            <figure class="pub-fig">
+              <a href="figures/carbon-texture-bias.webp" target="_blank" rel="noopener"><img src="figures/carbon-texture-bias.webp" alt="Mean bias of the published European POM and MAOM carbon layer across the soil texture triangle and by carbon quintile" loading="lazy"></a>
+              <figcaption>The published European fraction layer over-predicts carbon in sandy soils and under-predicts it in carbon-rich silty and clayey soils.</figcaption>
+            </figure>
+            <p class="fig-note">Submitted manuscript, under review at <em>European Journal of Soil Science</em>. Figures may change in revision. Data: LUCAS topsoil survey, made available by the European Commission through the European Soil Data Centre managed by the Joint Research Centre (JRC), https://esdac.jrc.ec.europa.eu/.</p>
           </div>
         </div>
       </div>
@@ -913,6 +945,13 @@ function showPubs(type, btn) {
   });
   document.querySelectorAll('.pub-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
+}
+
+function toggleFigs(btn){
+  const panel=document.getElementById(btn.getAttribute('aria-controls'));
+  const open=panel.classList.toggle('hidden')===false;
+  btn.setAttribute('aria-expanded',open);
+  btn.textContent=open?'Hide figures':'Show figures';
 }
 
 function copyCitation(btn, text) {
