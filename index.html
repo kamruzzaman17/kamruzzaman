@@ -208,6 +208,8 @@
   .sk-shots figcaption{font-size:.78rem;color:var(--muted);margin-top:.5rem;line-height:1.5;text-align:center}
   .sk-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
   .sk-tags span{font-size:.72rem;font-weight:600;padding:.2rem .6rem;border-radius:999px;background:var(--green-pale);color:var(--green)}
+  .nbc-credits{margin-top:1.1rem;padding-top:.9rem;border-top:1px solid rgba(156,79,34,.15);display:flex;flex-direction:column;gap:.35rem;font-size:.86rem;color:var(--text)}
+  .nbc-credits span{display:inline-block;min-width:92px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
   .nbc-figure{margin-top:2rem;background:var(--bg);border:1px solid rgba(156,79,34,.12);border-radius:16px;padding:1.5rem}
   .nbc-figure svg{width:100%;height:auto;display:block}
   .nbc-figure figcaption{font-size:.8rem;color:var(--muted);margin-top:.75rem;line-height:1.6}
@@ -852,6 +854,10 @@
           <li>Crop nutrient uptake constants calibrated and validated across three agroecological zones in Bangladesh</li>
           <li>Published as a live, public web tool — a timestamped, citable record of the underlying scientific contribution</li>
         </ul>
+        <div class="nbc-credits">
+          <div><span>Field data</span><a href="https://www.researchgate.net/profile/Md-Rahman-1558" target="_blank" rel="noopener noreferrer" style="color:var(--green);font-weight:600">Dr. Md. Safinur Rahman</a></div>
+          <div><span>Supervisor</span><a href="https://www.researchgate.net/profile/Mmr-Jahangir" target="_blank" rel="noopener noreferrer" style="color:var(--green);font-weight:600">Prof. Dr. M. M. R. Jahangir</a>, Department of Soil Science, BAU</div>
+        </div>
       </div>
       <div style="flex-shrink:0">
         <a href="https://kamruzzaman17.github.io/NBCtool/" class="btn-primary" target="_blank" rel="noopener noreferrer">Open Live Tool ↗</a>
@@ -882,7 +888,7 @@
         <rect class="out" x="656" y="161" width="224" height="50" rx="10"/><text class="t" x="672" y="183">NH₃ volatilization</text><text class="s" x="672" y="201">SOC, pH, mineral N, rainfall</text>
         <rect class="out" x="656" y="219" width="224" height="50" rx="10"/><text class="t" x="672" y="241">N₂O emission</text><text class="s" x="672" y="259">Nitrate, SOC, pH, rainfall</text>
       </svg>
-      <figcaption>Structure of the model I developed. Each loss pathway is a regression equation; uptake uses crop-specific constants. Covers N, P, K and S for potato, Boro, T. Aus and T. Aman rice, and maize, validated in three agroecological zones of Bangladesh (AEZ 7, 28 and 30) using field data collected by <a href="https://www.researchgate.net/profile/Md-Rahman-1558" target="_blank" rel="noopener noreferrer" style="color:var(--green)">Dr. Md. Safinur Rahman</a>. The research was supervised by <a href="https://www.researchgate.net/profile/Mmr-Jahangir" target="_blank" rel="noopener noreferrer" style="color:var(--green)">Prof. Dr. M. M. R. Jahangir</a>, Department of Soil Science, BAU.</figcaption>
+      <figcaption>Structure of the model I developed. Each loss pathway is a regression equation; uptake uses crop-specific constants. Covers N, P, K and S for potato, Boro, T. Aus and T. Aman rice, and maize, validated in three agroecological zones of Bangladesh (AEZ 7, 28 and 30).</figcaption>
     </figure>
   </div>
 </section>
