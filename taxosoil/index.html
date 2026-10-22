@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaxoSoil — Download</title>
+<meta name="description" content="TaxoSoil: an Android app to learn and classify soils with USDA Soil Taxonomy and WRB 2022, with a pedology dictionary and the Soil Chemistry Laboratory Manual. Free APK download.">
+<meta property="og:title" content="TaxoSoil — learn and classify soils">
+<meta property="og:description" content="USDA Soil Taxonomy, WRB 2022, Bangladesh soil series, pedology dictionary and an interactive soil chemistry lab manual. Free Android app.">
+<meta property="og:image" content="https://kamruzzaman17.github.io/kamruzzaman/taxosoil/logo.png">
+<link rel="icon" href="logo.png">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --green:#9C4F22;--green-light:#B5651D;--green-pale:#F3EBE1;
+    --dark:#22170F;--mid:#3E2A1E;--text:#2A1F17;--muted:#6B5A4C;
+    --bg:#FAF7F2;--card:#ffffff;--accent:#C9A227;--line:rgba(156,79,34,.14);
+    --shadow:0 4px 24px rgba(62,42,30,0.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --green:#E0A458;--green-light:#C27330;--green-pale:#2A2019;
+      --text:#F1E8DD;--muted:#BBA996;--bg:#14100C;--card:#1C1611;--line:rgba(255,255,255,.08);
+      --shadow:0 4px 24px rgba(0,0,0,0.4);
+    }
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+  a{color:var(--green)}
+
+  .hero{background:linear-gradient(135deg,var(--dark) 0%,var(--mid) 60%,#5A3A22 100%);color:#fff;padding:3.5rem 1rem 3rem}
+  .wrap{max-width:960px;margin:0 auto;padding:0 1rem}
+  .brand{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+  .brand img{width:76px;height:76px;border-radius:20px;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+  .brand h1{font-size:clamp(2rem,6vw,3rem);line-height:1.05;letter-spacing:-1px}
+  .brand p{color:#D9C3A5;font-size:.95rem}
+  .tagline{color:#E8D7C0;font-size:1.05rem;max-width:620px;margin-bottom:1.75rem}
+  .btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--green-light);color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:.9rem 1.6rem;border-radius:10px;transition:all .2s}
+  .btn:hover{background:#C27330;transform:translateY(-2px);box-shadow:0 8px 24px rgba(181,101,29,.35)}
+  .btn svg{width:22px;height:22px}
+  .meta{color:#C9B39A;font-size:.85rem;margin-top:.8rem}
+  .meta code{font-size:.75rem;word-break:break-all;color:#D9C3A5}
+
+  section{padding:3rem 1rem}
+  .tag{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--green)}
+  h2{font-size:clamp(1.5rem,3vw,2rem);margin:.25rem 0 1.25rem;line-height:1.2}
+
+  .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .shots figure{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:.6rem;box-shadow:var(--shadow)}
+  .shots img{width:100%;border-radius:10px;display:block}
+  .shots figcaption{font-size:.85rem;color:var(--muted);text-align:center;padding:.5rem .25rem .1rem}
+
+  .install{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.25rem 1.5rem;box-shadow:var(--shadow);margin-top:1.5rem}
+  .install ol{padding-left:1.25rem}
+  .install li{margin:.25rem 0}
+
+  .authors{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .author{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.4rem;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .badge{align-self:flex-start;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;background:var(--green-pale);color:var(--green);padding:.25rem .7rem;border-radius:999px;margin-bottom:.9rem}
+  .avatar{width:64px;height:64px;border-radius:50%;background:var(--green-pale);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.3rem;margin-bottom:.75rem;overflow:hidden;border:2px solid var(--green)}
+  .avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+  .author h3{font-size:1.1rem;line-height:1.3}
+  .role{color:var(--muted);font-size:.9rem;margin:.2rem 0 .6rem}
+  .did{font-size:.92rem;flex:1}
+  .links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+  .links a{font-size:.8rem;text-decoration:none;border:1px solid var(--line);padding:.2rem .6rem;border-radius:999px}
+  .links a:hover{background:var(--green-pale)}
+
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:2rem 1rem 3rem;border-top:1px solid var(--line)}
+
+  @media (max-width:760px){
+    .shots{grid-template-columns:1fr 1fr}
+    .shots figure:last-child{display:none}
+    .authors{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <img src="logo.png" alt="TaxoSoil logo">
+      <div>
+        <h1>TaxoSoil</h1>
+        <p>Android app · version 1.0</p>
+      </div>
+    </div>
+    <p class="tagline">Learn and classify soils with USDA Soil Taxonomy and WRB 2022 — down to family and the Bangladesh soil series — with a pedology dictionary and the Soil Chemistry Laboratory Manual built in. Free, works offline.</p>
+    <a class="btn" href="TaxoSoil-1.0.apk" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      Download TaxoSoil (APK, 2.6 MB)
+    </a>
+    <p class="meta">Android 8.0 or newer · SHA-256 <code>54fec216195031eba3f9def10ba14e54b498a02c7f740f7a910dccf4aa4c661c</code></p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <div class="tag">Inside the app</div>
+      <h2>Classify, look up, and run the lab</h2>
+      <div class="shots">
+        <figure><img src="classify.jpg" alt="TaxoSoil classifying a soil as Gelaquands with the order, suborder and great group shown" loading="lazy"><figcaption>Step-by-step classification</figcaption></figure>
+        <figure><img src="lab.jpg" alt="Lab manual calculator showing organic carbon by Walkley and Black with every working step" loading="lazy"><figcaption>Lab manual with calculators</figcaption></figure>
+        <figure><img src="dictionary.jpg" alt="Pedology dictionary entry for chroma with its source and a Wikipedia link" loading="lazy"><figcaption>Pedology dictionary with sources</figcaption></figure>
+      </div>
+      <div class="install">
+        <strong>How to install</strong>
+        <ol>
+          <li>Tap <em>Download</em> on your Android phone (or copy the file to it).</li>
+          <li>Open the downloaded <code>TaxoSoil-1.0.apk</code>.</li>
+          <li>If asked, allow <em>Install unknown apps</em> for your browser or file manager, then tap <em>Install</em>.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="tag">Authors</div>
+      <h2>Who made TaxoSoil</h2>
+      <div class="authors">
+        <article class="author">
+          <span class="badge">Prepared by</span>
+          <div class="avatar"><img src="../photo.jpg" alt="Md Kamruzzaman" onerror="this.parentNode.textContent='MK'"></div>
+          <h3>Md Kamruzzaman</h3>
+          <p class="role">Soil scientist · MSc Soil Science (BAU) · MSc Ecotoxicology (MATE, ongoing)</p>
+          <p class="did">Designed and built the app: classification keys, Bangladesh series, dictionary and the interactive lab manual.</p>
+          <div class="links">
+            <a href="mailto:kamruzzaman.swe@gmail.com">Email</a>
+            <a href="https://scholar.google.com/citations?user=rb326vAAAAAJ">Google Scholar</a>
+            <a href="https://www.researchgate.net/profile/Md-Kamruzzaman-82">ResearchGate</a>
+            <a href="../">Portfolio</a>
+          </div>
+        </article>
+        <article class="author">
+          <span class="badge">Validated by</span>
+          <div class="avatar">SA</div>
+          <h3>Md Sadiqul Amin</h3>
+          <p class="role">Associate Professor, Soil, Water and Environment Discipline, Khulna University</p>
+          <p class="did">Validated the classification rules, the Bangladesh soil content and the learning material.</p>
+          <div class="links">
+            <a href="https://scholar.google.com/citations?user=pBjdUsoAAAAJ">Google Scholar</a>
+            <a href="https://www.researchgate.net/profile/Md-Sadiqul-Amin">ResearchGate</a>
+            <a href="https://orcid.org/0000-0002-4341-1104">ORCID</a>
+            <a href="https://ku.ac.bd/discipline/swe/faculty/sadiq">KU profile</a>
+          </div>
+        </article>
+        <article class="author">
+          <span class="badge">Lab manual by</span>
+          <div class="avatar">KK</div>
+          <h3>Dr. Khandoker Qudrata Kibria</h3>
+          <p class="role">Professor, Soil, Water and Environment Discipline, Khulna University</p>
+          <p class="did">Author of the Soil Chemistry Laboratory Manual shown in the app's Lab section, used with permission.</p>
+          <div class="links">
+            <a href="https://orcid.org/0000-0001-5479-9514">ORCID</a>
+            <a href="https://ku.ac.bd/discipline/swe/faculty/kibriaku">KU profile</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  TaxoSoil is a learning aid — check final classifications against the official Keys to Soil Taxonomy and WRB 2022.<br>
+  © 2026 Md Kamruzzaman · <a href="../">kamruzzaman17.github.io/kamruzzaman</a>
+</footer>
+
+</body>
+</html>
