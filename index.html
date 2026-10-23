@@ -307,7 +307,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#nbctool">NBC Tool</a></li>
-      <li><a href="#soilkey">SoilKey App</a></li>
+      <li><a href="#taxosoil">TaxoSoil App</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#awards">Awards</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -325,7 +325,7 @@
     <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
     <li><a href="#publications" class="mobile-nav-link">Publications</a></li>
     <li><a href="#nbctool" class="mobile-nav-link">NBC Tool</a></li>
-    <li><a href="#soilkey" class="mobile-nav-link">SoilKey App</a></li>
+    <li><a href="#taxosoil" class="mobile-nav-link">TaxoSoil App</a></li>
     <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
     <li><a href="#awards" class="mobile-nav-link">Awards</a></li>
     <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
@@ -895,33 +895,36 @@
 
 
 <!-- SOILKEY APP -->
-<section id="soilkey">
+<section id="taxosoil">
   <div class="section-inner fade-in">
     <p class="section-tag">Android App</p>
-    <h2 class="section-title">Featured App: SoilKey</h2>
-    <p class="section-lead">An Android app that teaches USDA Soil Taxonomy by doing it. Students describe a soil one question at a time and SoilKey walks the official Keys (13th edition, 2022) from order down to family and the Bangladesh soil series — explaining every term on the way.</p>
+    <h2 class="section-title">Featured App: TaxoSoil</h2>
+    <p class="section-lead">An Android app that teaches soil classification by doing it. Students describe a soil one question at a time and TaxoSoil walks USDA Soil Taxonomy (Keys, 13th edition, 2022) or WRB 2022 down to family and the Bangladesh soil series — explaining every term on the way. Free download, works offline.</p>
     <div class="exp-card" style="display:flex;flex-wrap:wrap;gap:2rem;align-items:flex-start;justify-content:space-between">
       <div style="flex:1;min-width:260px">
         <ul class="exp-bullets">
-          <li>All Keys to Orders, Suborders and Great Groups, plus Bangladesh-focused Keys to Subgroups, transcribed into a rule engine with three-valued logic — "don't know" answers keep every still-possible class visible</li>
-          <li>Family level: particle-size, mineralogy, CEC-activity, reaction, temperature and depth classes (Keys Ch. 17)</li>
-          <li>476 Bangladesh soil series (SRDI) with old and current Soil Taxonomy names and a step-by-step classification for each</li>
-          <li>Learning built in: definitions, field recognition, key criteria and "why it matters" for every question; swipeable flashcards; a Munsell colour helper</li>
-          <li>Live soil-profile drawing from the student's answers and from described series profiles; typical profile photo for each order</li>
-          <li>Saved pedons export as PDF reports or CSV for Excel, stamped with the student's name and ID for teachers to check</li>
-          <li>Validated against more than 340 reference cases; rule data shipped encrypted</li>
+          <li>All Keys to Orders, Suborders and Great Groups, plus Bangladesh-focused Keys to Subgroups, in a rule engine with three-valued logic — "don't know" answers keep every still-possible class visible</li>
+          <li>WRB 2022 Reference Soil Groups with principal and supplementary qualifiers, linked to Soil Taxonomy through correlation hints</li>
+          <li>Family level (Keys Ch. 17) and 476 Bangladesh soil series (SRDI) with old and current names; live flowchart of the key as the student answers</li>
+          <li>Pedology dictionary of about 700 terms, each with its source and a Wikipedia link for further reading</li>
+          <li>Interactive Soil Chemistry Laboratory Manual: reagent amounts for any number of samples, step-by-step procedures with timers, and calculators that show every working step</li>
+          <li>Saved pedons export as PDF, image or CSV, stamped with the student's name and ID for teachers to check</li>
         </ul>
-        <div class="sk-tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Rule engine (JSON)</span><span>Node.js test suite</span><span>Soil Taxonomy 13th ed.</span></div>
+        <div class="sk-tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Rule engine (JSON)</span><span>Node.js test suite</span><span>Soil Taxonomy 13th ed.</span><span>WRB 2022</span></div>
       </div>
       <div style="flex-shrink:0;max-width:280px">
-        <p style="font-size:.85rem;color:var(--muted);line-height:1.6;margin:0">Prepared by Md Kamruzzaman. Validated by <a href="https://ku.ac.bd/discipline/swe/faculty/sadiq" target="_blank" rel="noopener noreferrer" style="color:var(--green)">Md Sadiqul Amin</a>, Associate Professor, Soil, Water and Environment Discipline, Khulna University.</p>
-        <p style="font-size:.85rem;color:var(--muted);line-height:1.6;margin:.75rem 0 0">Google Play release in preparation.</p>
+        <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1rem">
+          <a class="btn-primary" href="taxosoil/TaxoSoil-1.0.apk" download style="justify-content:center">&#11015; Download APK (2.6 MB)</a>
+          <a href="taxosoil/" style="color:var(--green);font-weight:600;font-size:.9rem;text-align:center">Download page, install steps and authors &rarr;</a>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);line-height:1.6;margin:0">Prepared by Md Kamruzzaman. Validated by <a href="https://ku.ac.bd/discipline/swe/faculty/sadiq" target="_blank" rel="noopener noreferrer" style="color:var(--green)">Md Sadiqul Amin</a>, Associate Professor, Soil, Water and Environment Discipline, Khulna University. Lab manual by <a href="https://ku.ac.bd/discipline/swe/faculty/kibriaku" target="_blank" rel="noopener noreferrer" style="color:var(--green)">Dr. Khandoker Qudrata Kibria</a>, Professor, Khulna University.</p>
+        <p style="font-size:.85rem;color:var(--muted);line-height:1.6;margin:.75rem 0 0">Android 8.0 or newer.</p>
       </div>
     </div>
     <div class="sk-shots">
-      <figure><img src="figures/soilkey-classify.jpg" alt="SoilKey result screen: Fine-silty, mixed, active, calcareous, hyperthermic Aeric Endoaquepts, with a typical Inceptisol profile photo" loading="lazy"><figcaption>Classification to family, with the reasons at every level</figcaption></figure>
-      <figure><img src="figures/soilkey-profile.jpg" alt="SoilKey family classes and a soil profile drawn from the student's answers" loading="lazy"><figcaption>Family classes and the student's profile, drawn live</figcaption></figure>
-      <figure><img src="figures/soilkey-series.jpg" alt="Tejgaon series profile drawn from its Munsell colours" loading="lazy"><figcaption>Bangladesh series profiles in their Munsell colours</figcaption></figure>
+      <figure><img src="figures/soilkey-classify.jpg" alt="TaxoSoil result screen: Fine-silty, mixed, active, calcareous, hyperthermic Aeric Endoaquepts, with a typical Inceptisol profile photo" loading="lazy"><figcaption>Classification to family, with the reasons at every level</figcaption></figure>
+      <figure><img src="figures/soilkey-profile.jpg" alt="TaxoSoil family classes and a soil profile drawn from the student's answers" loading="lazy"><figcaption>Family classes and the student's profile, drawn live</figcaption></figure>
+      <figure><img src="taxosoil/lab.jpg" alt="TaxoSoil lab manual: organic carbon by Walkley and Black with every working step" loading="lazy"><figcaption>Lab manual calculators with the working shown</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1061,7 +1064,7 @@ document.addEventListener('click', e => {
 });
 
 /* Soil-horizon rail: highlight the horizon you are "digging" through */
-const HZ = {hero:'O',about:'O',experience:'A',publications:'A',skills:'B',nbctool:'B',soilkey:'B',awards:'C',contact:'C'};
+const HZ = {hero:'O',about:'O',experience:'A',publications:'A',skills:'B',nbctool:'B',taxosoil:'B',awards:'C',contact:'C'};
 const railLinks = document.querySelectorAll('.horizon-rail a');
 function updateRail(){
   let cur='O';
