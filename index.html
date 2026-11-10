@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kamruzzaman17.github.io/kamruzzaman/">
 <meta property="og:title" content="Md Kamruzzaman — Soil Scientist">
-<meta property="og:description" content="Soil carbon, enzymes and nutrient cycling. 8 journal articles, 5 book chapters, 3 manuscripts under review. Open to PhD opportunities.">
+<meta property="og:description" content="Soil carbon, enzymes and nutrient cycling. 8 journal articles, 5 book chapters, 4 manuscripts under review. Open to PhD opportunities.">
 <meta property="og:image" content="https://kamruzzaman17.github.io/kamruzzaman/og-image.jpg">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -352,7 +352,7 @@
       <div class="hero-stats">
         <div class="hero-stat"><span>8</span><span>Journal Articles</span></div>
         <div class="hero-stat"><span>5</span><span>Book Chapters</span></div>
-        <div class="hero-stat"><span>3</span><span>Under Review</span></div>
+        <div class="hero-stat"><span>4</span><span>Under Review</span></div>
       </div>
       <div class="hero-btns">
         <a href="#publications" class="btn-primary">View Publications</a>
@@ -383,7 +383,7 @@
         <h2 class="section-title">Research Profile</h2>
         <p class="profile-text">I am a soil scientist with training in ecotoxicology. My background spans soil biogeochemistry, nutrient cycling and contamination, built through research in Bangladesh and Hungary.</p>
         <p class="profile-text">My work focuses on understanding how soil ecosystems respond to environmental stressors — from nitrogen fertilisation and greenhouse gas dynamics to heavy metal contamination and microbial community interactions. I integrate classical soil analyses with molecular tools and quantitative statistical modelling to link ecosystem processes to real-world agricultural and environmental outcomes.</p>
-        <p class="profile-text">My current work uses the LUCAS 2018 European soil survey and global literature data. I study how soil pH shapes enzyme ratios across Europe. I test whether routine laboratory data can predict soil carbon fractions in countries with no samples. I also ran a global meta-analysis on what drives permanganate-oxidizable carbon. All three manuscripts are now under review. Earlier, I developed the scientific models behind a field-validated nutrient balance calculator.</p>
+        <p class="profile-text">My current work uses the LUCAS 2018 European soil survey and global literature data. I study how soil pH shapes enzyme ratios across Europe. I test whether routine laboratory data can predict soil carbon fractions in countries with no samples. I also ran a global meta-analysis on what drives permanganate-oxidizable carbon, and I showed that soil C:N predicts aggregate stability beyond organic carbon across Europe. All four manuscripts are now under review. Earlier, I developed the scientific models behind a field-validated nutrient balance calculator.</p>
         <div class="research-areas">
           <div class="ra-card"><h4>Nitrogen Cycling &amp; Nutrient Management</h4><p>Soil nitrogen supply estimation, NMI development, fertiliser optimisation, GHG emission dynamics</p></div>
           <div class="ra-card"><h4>Soil Biogeochemistry &amp; Microbiology</h4><p>Enzyme ratios and soil pH, acid phosphatase, POM and MAOM carbon fractions, permanganate-oxidizable carbon (POXC), land-use effects on labile carbon, carbon and phosphorus cycling, FAME profiling, aggregate stability</p></div>
@@ -495,7 +495,7 @@
     <p class="section-tag">Scholarly Output</p>
     <h2 class="section-title">Publications</h2>
     <div class="pub-tabs">
-      <button class="pub-tab review-tab active" onclick="showPubs('review',this)">Under Review (3)</button>
+      <button class="pub-tab review-tab active" onclick="showPubs('review',this)">Under Review (4)</button>
       <button class="pub-tab" onclick="showPubs('journals',this)">Journal Articles (8)</button>
       <button class="pub-tab" onclick="showPubs('chapters',this)">Book Chapters (5)</button>
     </div>
@@ -575,6 +575,30 @@
               <figcaption>Study sites in the global database span six continents.</figcaption>
             </figure>
             <p class="fig-note">Submitted manuscript, under review at <em>European Journal of Soil Science</em>. Figures may change in revision. Data compiled from published field studies.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item review-item">
+        <div class="pub-num review-num">4</div>
+        <div class="pub-content">
+          <h4>Soil C:N predicts aggregate stability beyond organic carbon across 697 European soils.</h4>
+          <p class="pub-authors"><strong>Kamruzzaman, M.</strong></p>
+          <div class="pub-meta">
+            <span class="pub-journal review-journal">Catena</span>
+            <span class="pub-badge-review">Under review</span>
+            <span class="pub-year">2026</span>
+          </div>
+          <div class="pub-actions"><button class="cite-btn fig-btn" aria-expanded="false" aria-controls="figs-aggregate" onclick="toggleFigs(this)">Show figures</button></div>
+          <div class="fig-panel hidden" id="figs-aggregate">
+            <figure class="pub-fig">
+              <a href="figures/aggregate-cn-heatmap.webp" target="_blank" rel="noopener"><img src="figures/aggregate-cn-heatmap.webp" alt="Median water-stable aggregates by organic carbon quartile and soil C:N class across 697 European sites, and soil C:N plotted against organic carbon by land use" loading="lazy"></a>
+              <figcaption>At the same organic carbon, soils with a higher C:N hold fewer water-stable aggregates. On its own, C:N looks unrelated to stability, because carbon-rich woodland soils also have a high C:N.</figcaption>
+            </figure>
+            <figure class="pub-fig">
+              <a href="figures/aggregate-heldout-prediction.webp" target="_blank" rel="noopener"><img src="figures/aggregate-heldout-prediction.webp" alt="Leave-one-country-out R-squared of seven mixed models of water-stable aggregates, and measured against predicted values for countries left out of the model" loading="lazy"></a>
+              <figcaption>In countries the models never saw, adding C:N to organic carbon raises the explained variation in aggregate stability from 20% to 29%.</figcaption>
+            </figure>
+            <p class="fig-note">Submitted manuscript, under review at <em>Catena</em>. Figures may change in revision. Data: LUCAS topsoil survey, made available by the European Commission through the European Soil Data Centre managed by the Joint Research Centre (JRC), https://esdac.jrc.ec.europa.eu/.</p>
           </div>
         </div>
       </div>
