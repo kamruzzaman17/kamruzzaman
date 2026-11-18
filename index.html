@@ -308,6 +308,7 @@
       <li><a href="#publications">Publications</a></li>
       <li><a href="#nbctool">NBC Tool</a></li>
       <li><a href="#taxosoil">SoilBench App</a></li>
+      <li><a href="#toxguide">ToxGuide App</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#awards">Awards</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -326,6 +327,7 @@
     <li><a href="#publications" class="mobile-nav-link">Publications</a></li>
     <li><a href="#nbctool" class="mobile-nav-link">NBC Tool</a></li>
     <li><a href="#taxosoil" class="mobile-nav-link">SoilBench App</a></li>
+    <li><a href="#toxguide" class="mobile-nav-link">ToxGuide App</a></li>
     <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
     <li><a href="#awards" class="mobile-nav-link">Awards</a></li>
     <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
@@ -949,6 +951,40 @@
       <figure><img src="figures/soilkey-classify.jpg" alt="TaxoSoil result screen: Fine-silty, mixed, active, calcareous, hyperthermic Aeric Endoaquepts, with a typical Inceptisol profile photo" loading="lazy"><figcaption>Classification to family, with the reasons at every level</figcaption></figure>
       <figure><img src="figures/soilkey-profile.jpg" alt="TaxoSoil family classes and a soil profile drawn from the student's answers" loading="lazy"><figcaption>Family classes and the student's profile, drawn live</figcaption></figure>
       <figure><img src="taxosoil/lab.jpg" alt="TaxoSoil lab manual: organic carbon by Walkley and Black with every working step" loading="lazy"><figcaption>Lab manual calculators with the working shown</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- TOXGUIDE APP -->
+<section id="toxguide">
+  <div class="section-inner fade-in">
+    <p class="section-tag">Android App · New</p>
+    <h2 class="section-title">Featured App: ToxGuide</h2>
+    <p class="section-lead">An Android app for OECD ecotoxicity testing. It summarises all 56 OECD Section 2 test guidelines (TG 201–256) in plain words, lets students and labs design a test their own way or by the strict OECD rules, record counts on any day, and get EC50/LC50 and NOEC/LOEC with graphs. Free download, works offline.</p>
+    <div class="exp-card" style="display:flex;flex-wrap:wrap;gap:2rem;align-items:flex-start;justify-content:space-between">
+      <div style="flex:1;min-width:260px">
+        <ul class="exp-bullets">
+          <li>All 56 guidelines for soil organisms, aquatic invertebrates and plants, fish, sediment, bees, birds, amphibians and sludge microorganisms, with a filter by test type (acute, chronic, reproduction, embryo, growth inhibition, endocrine and more)</li>
+          <li>Flexible designs for teaching (own concentrations, replicates per group, solvent control, counting days) or Strict OECD mode with a design checklist and a VALID / NOT VALID verdict</li>
+          <li>Statistics engine following OECD No. 54 and checked against R: probit with Abbott correction, Spearman–Kärber, log-logistic ECx, Williams, Dunnett and Mann–Whitney/Holm for NOEC/LOEC</li>
+          <li>Dose–response charts marking EC/LC10, 20, 50 and NOEC/LOEC, response over time, and analysis that still runs when some vessels have missing data</li>
+          <li>The official OECD PDF for each guideline one tap away, and CSV export of every run</li>
+        </ul>
+        <div class="sk-tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Statistics engine</span><span>Validated vs R</span><span>OECD TG 201–256</span><span>OECD No. 54</span></div>
+      </div>
+      <div style="flex-shrink:0;max-width:280px">
+        <img src="toxguide/logo.png" alt="ToxGuide logo" style="width:96px;height:96px;border-radius:50%;display:block;margin:0 auto 1rem">
+        <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1rem">
+          <a class="btn-primary" href="toxguide/#download" style="justify-content:center">&#11015; Download ToxGuide (1.5 MB)</a>
+          <a href="toxguide/" style="color:var(--green);font-weight:600;font-size:.9rem;text-align:center">Features, install steps and licence &rarr;</a>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);line-height:1.6;margin:0">Prepared by Md Kamruzzaman. Android 8.0 or newer.</p>
+      </div>
+    </div>
+    <div class="sk-shots">
+      <figure><img src="toxguide/home.png" alt="ToxGuide home with test-type filter: Reproduction selected, 11 tests" loading="lazy"><figcaption>Filter the 56 guidelines by test type</figcaption></figure>
+      <figure><img src="toxguide/results.png" alt="ToxGuide TG 207 results: LC10, LC20 and LC50 with 95 % limits" loading="lazy"><figcaption>LC50 with confidence limits and validity</figcaption></figure>
+      <figure><img src="toxguide/chart.png" alt="ToxGuide dose–response curve and response over time" loading="lazy"><figcaption>Graphs with every marker</figcaption></figure>
     </div>
   </div>
 </section>

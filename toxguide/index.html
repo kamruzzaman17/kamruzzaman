@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToxGuide — Download</title>
+<meta name="description" content="ToxGuide: an Android app to plan, record and analyse OECD ecotoxicity tests (TG 201–256) — flexible designs, EC50/LC50, NOEC/LOEC and dose–response graphs. Free APK download.">
+<meta property="og:title" content="ToxGuide — OECD ecotoxicity tests in your pocket">
+<meta property="og:description" content="All 56 OECD Section 2 test guidelines, flexible or strict designs, EC50/LC50 and NOEC/LOEC with graphs. Free Android app.">
+<meta property="og:image" content="https://kamruzzaman17.github.io/kamruzzaman/toxguide/logo.png">
+<link rel="icon" href="logo.png">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --green:#00696A;--green-light:#00807F;--green-pale:#E0F4F3;
+    --dark:#00393A;--mid:#00494A;--text:#13292A;--muted:#4F6667;
+    --bg:#F5FAFA;--card:#ffffff;--accent:#FFB74D;--line:rgba(0,105,106,.14);
+    --shadow:0 4px 24px rgba(0,57,58,0.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --green:#5EEAD4;--green-light:#00807F;--green-pale:#11292A;
+      --text:#E3F1F0;--muted:#9FB8B7;--bg:#0B1414;--card:#111C1D;--line:rgba(255,255,255,.08);
+      --shadow:0 4px 24px rgba(0,0,0,0.4);
+    }
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+  a{color:var(--green)}
+  .hero{background:linear-gradient(135deg,#002E2F 0%,var(--mid) 55%,#233A57 100%);color:#fff;padding:3.5rem 1rem 3rem}
+  .wrap{max-width:960px;margin:0 auto;padding:0 1rem}
+  .brand{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+  .brand img{width:76px;height:76px;border-radius:50%;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+  .brand h1{font-size:clamp(2rem,6vw,3rem);line-height:1.05;letter-spacing:-1px}
+  .brand p{color:#A7D8D4;font-size:.95rem}
+  .tagline{color:#D3EEEC;font-size:1.05rem;max-width:640px;margin-bottom:1.75rem}
+  .btn{display:inline-flex;align-items:center;gap:.6rem;background:#00807F;color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:.9rem 1.6rem;border-radius:10px;transition:all .2s}
+  .btn:hover{background:#009896;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,128,127,.35)}
+  .btn svg{width:22px;height:22px}
+  .meta{color:#A7CBC8;font-size:.85rem;margin-top:.8rem}
+  section{padding:3rem 1rem}
+  .tag{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--green)}
+  h2{font-size:clamp(1.5rem,3vw,2rem);margin:.25rem 0 1.25rem;line-height:1.2}
+  .feats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.2rem 1.3rem;box-shadow:var(--shadow)}
+  .feat h3{font-size:1rem;margin-bottom:.35rem;color:var(--green)}
+  .feat p{font-size:.92rem;color:var(--text)}
+  .shots{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  .shots figure{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:.6rem;box-shadow:var(--shadow)}
+  .shots img{width:100%;border-radius:10px;display:block}
+  .shots figcaption{font-size:.85rem;color:var(--muted);text-align:center;padding:.5rem .25rem .1rem}
+  .install{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.25rem 1.5rem;box-shadow:var(--shadow);margin-top:1.5rem}
+  .install ol{padding-left:1.25rem}
+  .install li{margin:.25rem 0}
+  .author{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.4rem;box-shadow:var(--shadow);display:flex;gap:1.2rem;align-items:flex-start;max-width:640px}
+  .badge{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;background:var(--green-pale);color:var(--green);padding:.25rem .7rem;border-radius:999px;margin-bottom:.5rem}
+  .avatar{width:72px;height:72px;border-radius:50%;background:var(--green-pale);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.3rem;overflow:hidden;border:2px solid var(--green);flex:none}
+  .avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+  .author h3{font-size:1.1rem;line-height:1.3}
+  .role{color:var(--muted);font-size:.9rem;margin:.2rem 0 .6rem}
+  .did{font-size:.92rem}
+  .links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+  .links a{font-size:.8rem;text-decoration:none;border:1px solid var(--line);padding:.2rem .6rem;border-radius:999px}
+  .links a:hover{background:var(--green-pale)}
+  .dl[aria-disabled="true"]{opacity:.45;cursor:not-allowed;pointer-events:none}
+  .agree{display:flex;gap:.6rem;align-items:flex-start;color:#DDF3F1;font-size:.95rem;margin-top:1rem;max-width:620px;cursor:pointer}
+  .agree input{width:20px;height:20px;margin-top:.2rem;accent-color:#00807F;flex:none}
+  .note{color:var(--muted);font-size:.9rem;margin-top:1rem}
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:2rem 1rem 3rem;border-top:1px solid var(--line)}
+  @media (max-width:860px){ .shots{grid-template-columns:1fr 1fr} .feats{grid-template-columns:1fr 1fr} }
+  @media (max-width:560px){ .feats{grid-template-columns:1fr} .author{flex-direction:column} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <img src="logo.png" alt="ToxGuide logo: a dose–response curve with the EC50 marked">
+      <div>
+        <h1>ToxGuide</h1>
+        <p>Android app · version 1.0</p>
+      </div>
+    </div>
+    <p class="tagline">Plan, record and analyse OECD ecotoxicity tests. All 56 Section 2 test guidelines in plain words, your own concentrations and replicates (or strict OECD design), counts on any day, and results with EC50/LC50, NOEC/LOEC and dose–response graphs. For students and laboratories. Free, works offline.</p>
+    <a class="btn dl" data-dl="ToxGuide-1.0.apk" aria-disabled="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      Download ToxGuide 1.0 (APK, 1.5 MB)
+    </a>
+    <p class="meta">Requires Android 8.0 or newer</p>
+    <label class="agree" id="download"><input type="checkbox" id="agree"> I have read and agree to the <a href="license.html" style="color:#fff">ToxGuide licence and terms of use</a>.</label>
+    <p class="meta" id="agree-hint">Tick the box to enable the download.</p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <div class="tag">What it does</div>
+      <h2>From test guideline to result</h2>
+      <div class="feats">
+        <div class="feat"><h3>All 56 OECD Section 2 guidelines</h3><p>TG 201–256 for soil, aquatic invertebrates and plants, fish, sediment, bees, birds, amphibians and sludge microorganisms — each summarised in plain words: what it measures, how it works, conditions, design and validity.</p></div>
+        <div class="feat"><h3>Filter by test type</h3><p>Acute, chronic, reproduction, embryo and early life, growth inhibition, endocrine, microbial function and more. Pick several types and only the matching tests stay.</p></div>
+        <div class="feat"><h3>Your design, your way</h3><p>Flexible mode for teaching and practice: your own concentrations, replicates per group (e.g. 4 controls, 2 per concentration), solvent control, unit and counting days. Strict OECD mode checks the design and gives a VALID / NOT VALID verdict.</p></div>
+        <div class="feat"><h3>Results with graphs</h3><p>EC/LC/LD10, 20 and 50 with 95 % limits (probit, Spearman–Kärber, log-logistic), NOEC/LOEC (Williams, Dunnett, Mann–Whitney), dose–response chart with every marker, and response over time.</p></div>
+        <div class="feat"><h3>Works with missing data</h3><p>A vessel without numbers is skipped with a note; the rest of the results and charts are still calculated from the vessels that have data.</p></div>
+        <div class="feat"><h3>Original OECD text one tap away</h3><p>Each guideline links to the official OECD PDF, downloaded once from oecd.org and then opened offline. CSV export of every run.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="tag">Inside the app</div>
+      <h2>Filter, design, analyse</h2>
+      <div class="shots">
+        <figure><img src="home.png" alt="Home page with search and test-type filter chips; Reproduction selected shows 11 tests" loading="lazy"><figcaption>Filter tests by type</figcaption></figure>
+        <figure><img src="design.png" alt="Design editor: flexible or strict OECD mode, unit, counting days, control and solvent replicates" loading="lazy"><figcaption>Your own design</figcaption></figure>
+        <figure><img src="results.png" alt="TG 207 results: LC10, LC20, LC50 with 95 % limits and the validity check" loading="lazy"><figcaption>LC50 with limits</figcaption></figure>
+        <figure><img src="chart.png" alt="Dose–response curve with LC markers and response over time by concentration" loading="lazy"><figcaption>Graphs with markers</figcaption></figure>
+      </div>
+      <div class="install">
+        <strong>How to install</strong>
+        <ol>
+          <li>Tick the licence box above, then tap <em>Download</em> on your Android phone (or copy the file to it).</li>
+          <li>Open the downloaded <code>ToxGuide-1.0.apk</code>.</li>
+          <li>If asked, allow <em>Install unknown apps</em> for your browser or file manager, then tap <em>Install</em>.</li>
+        </ol>
+      </div>
+      <p class="note">Statistics follow OECD (2006) Series on Testing and Assessment No. 54. Each method was checked against R (drc, multcomp, PMCMRplus). Guideline summaries are written in our own words; the official OECD documents remain the reference.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="tag">All versions</div>
+      <h2>Release history</h2>
+      <div class="install">
+        <ol style="list-style:none;padding-left:0">
+          <li><strong>ToxGuide 1.0</strong> (latest, Nov 2026) — first release: all 56 OECD Section 2 guidelines, test-type filter, flexible and strict OECD designs, counting days, leave-out vessels, partial-data analysis, EC/LC/LD and NOEC/LOEC with graphs, original OECD PDFs, CSV export. <a class="dl" data-dl="ToxGuide-1.0.apk" aria-disabled="true">Download (1.5 MB)</a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="tag">Author</div>
+      <h2>Who made ToxGuide</h2>
+      <article class="author">
+        <div class="avatar"><img src="../photo.jpg" alt="Md Kamruzzaman" onerror="this.parentNode.textContent='MK'"></div>
+        <div>
+          <span class="badge">Prepared by</span>
+          <h3>Md Kamruzzaman</h3>
+          <p class="role">Soil scientist and ecotoxicologist · MSc Soil Science (BAU) · MSc Ecotoxicology (MATE, ongoing)</p>
+          <p class="did">Designed and built the app: guideline summaries, flexible test designer and the statistics engine.</p>
+          <div class="links">
+            <a href="mailto:kamruzzaman.swe@gmail.com">Email</a>
+            <a href="https://scholar.google.com/citations?user=rb326vAAAAAJ">Google Scholar</a>
+            <a href="https://www.researchgate.net/profile/Md-Kamruzzaman-82">ResearchGate</a>
+            <a href="../">Portfolio</a>
+            <a href="../soilbench/">SoilBench app</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="license.html">Licence and terms of use</a><br>
+  ToxGuide is a planning and analysis aid — always follow the full official OECD Test Guideline and check results before reporting. OECD is not affiliated with this app.<br>
+  © 2026 Md Kamruzzaman · <a href="../">kamruzzaman17.github.io/kamruzzaman</a>
+</footer>
+
+<script>
+  (function () {
+    var box = document.getElementById('agree'), hint = document.getElementById('agree-hint');
+    var links = document.querySelectorAll('a.dl');
+    function sync() {
+      links.forEach(function (a) {
+        if (box.checked) { a.setAttribute('href', a.getAttribute('data-dl')); a.setAttribute('download', ''); a.setAttribute('aria-disabled', 'false'); }
+        else { a.removeAttribute('href'); a.removeAttribute('download'); a.setAttribute('aria-disabled', 'true'); }
+      });
+      hint.textContent = box.checked ? 'Thank you — the download is enabled.' : 'Tick the box to enable the download.';
+    }
+    box.checked = false;
+    box.addEventListener('change', sync);
+    sync();
+  })();
+</script>
+</body>
+</html>
